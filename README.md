@@ -78,9 +78,9 @@ In the root directory of the project, create a file named `db.json` and add the 
     { "id": 2, "name": "Editor", "permissions": ["Read", "Write"] }
   ],
   "permissions": [
-    { "id": "6da9", "name": "Read"},
-    { "id": "10ef", "name": "Write"},
-    { "id": "a817", "name": "Delete"}
+    { "id": "1", "name": "Read"},
+    { "id": "2", "name": "Write"},
+    { "id": "3", "name": "Delete"}
   ]
 }
 ```
