@@ -52,8 +52,8 @@ Before you begin, ensure you have met the following requirements:
 Clone the repository to your local machine using the following command:
 
 ```bash
-git clone <repository-url>
-cd rbac-ui
+git clone https://github.com/shubhamraj-24/RBAC-UI.git
+cd RBAC-UI
 ```
 
 ### **3. Install Dependencies**
