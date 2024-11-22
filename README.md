@@ -1,6 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 # **RBAC UI - Role-Based Access Control (RBAC) Interface**
 
 ## **Project Overview**
@@ -52,3 +49,102 @@ Clone the repository to your local machine using the following command:
 ```bash
 git clone <repository-url>
 cd rbac-ui
+```
+
+### **2. Install Dependencies**
+Install the required dependencies using npm:
+
+```bash
+npm install
+```
+This will install all necessary libraries including React, Material UI, Axios, and JSON Server.
+
+### **3. Set Up JSON Server (Mock API)**
+In the root directory of the project, create a file named `db.json` and add the following mock data for users and roles:
+
+```json
+{
+  "users": [
+    { "id": 1, "name": "Admin", "email": "admin@vrv.com", "role": "Admin", "status": "Active" },
+    { "id": 2, "name": "User1", "email": "user1@vrv.com", "role": "Editor", "status": "Inactive" }
+  ],
+  "roles": [
+    { "id": 1, "name": "Admin", "permissions": ["Read", "Write", "Delete"] },
+    { "id": 2, "name": "Editor", "permissions": ["Read", "Write"] }
+  ]
+}
+```
+
+Start the JSON Server to simulate API endpoints:
+
+```bash
+npx json-server --watch db.json --port 5000
+```
+This will run the server at `http://localhost:5000` and expose mock API endpoints for managing users and roles.
+
+### **4. Start the React App**
+To start the React application, use the following command:
+
+```bash
+npm start
+```
+This will run the React application at `http://localhost:3000`. You can now interact with the User Management, Role Management, and Permissions Management interfaces.
+
+---
+
+## **Folder Structure**
+The project follows a standard React folder structure with some modifications for clarity:
+
+```
+rbac-ui/
+├── db.json                 # Mock API data for JSON Server
+├── node_modules/           # Project dependencies
+├── public/                 # Public assets (index.html, favicon, etc.)
+├── src/                    # Source code
+│   ├── api/                # API helper functions for CRUD operations
+│   │   └── api.ts
+│   ├── components/         # React components
+│   │   ├── UserManagement.tsx
+│   │   ├── RoleManagement.tsx
+│   │   └── Permissions.tsx
+│   ├── App.tsx             # Main App component with routing
+│   └── index.tsx           # React entry point
+├── package.json            # Project dependencies and scripts
+├── tsconfig.json           # TypeScript configuration
+└── README.md               # Project documentation
+```
+
+---
+
+## **API Endpoints (Mocked by JSON Server)**
+- **GET /users** – Get all users.
+- **GET /users/{id}** – Get a specific user by ID.
+- **POST /users** – Create a new user.
+- **PUT /users/{id}** – Update an existing user.
+- **DELETE /users/{id}** – Delete a user.
+- **GET /roles** – Get all roles.
+- **GET /roles/{id}** – Get a specific role by ID.
+- **POST /roles** – Create a new role.
+- **PUT /roles/{id}** – Update an existing role.
+- **DELETE /roles/{id}** – Delete a role.
+
+---
+
+## **How to Contribute**
+If you'd like to contribute to this project, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature (`git checkout -b feature-name`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push to your forked repository (`git push origin feature-name`).
+5. Create a pull request.
+
+---
+
+## **License**
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+## **Conclusion**
+This RBAC UI project offers a simple yet functional implementation of a Role-Based Access Control system with a clean user interface for managing users, roles, and permissions. The use of React and Material UI ensures that the application is both responsive and user-friendly.
