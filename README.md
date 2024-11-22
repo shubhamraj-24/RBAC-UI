@@ -121,7 +121,7 @@ rbac-ui/
 
 ---
 
-## **API Endpoints (Mocked by JSON Server)**
+## **API Endpoints Examples (Mocked by JSON Server)**
 - **GET /users** – Get all users.
 - **GET /users/{id}** – Get a specific user by ID.
 - **POST /users** – Create a new user.
