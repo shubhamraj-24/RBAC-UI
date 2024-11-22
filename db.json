@@ -1,0 +1,120 @@
+{
+  "users": [
+    {
+      "id": "8683",
+      "name": "user1",
+      "email": "user1@gmail.com",
+      "role": "Director",
+      "status": "Active"
+    },
+    {
+      "id": "ffcf",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "role": "Manager-2",
+      "status": "Active"
+    },
+    {
+      "id": "1cf4",
+      "name": "user3",
+      "email": "user3@gmail.com",
+      "role": "Manager",
+      "status": "Inactive"
+    },
+    {
+      "id": "70de",
+      "name": "user4",
+      "email": "user4@gmail.com",
+      "role": "Admin",
+      "status": "Inactive"
+    },
+    {
+      "id": "50de",
+      "name": "user5",
+      "email": "user5@gmail.com",
+      "role": "Client",
+      "status": "Active"
+    },
+    {
+      "id": "5e5e",
+      "name": "user6",
+      "email": "user6@gmail.com",
+      "role": "Guest",
+      "status": "Active"
+    }
+  ],
+  "roles": [
+    {
+      "id": "8835",
+      "name": "Director",
+      "permissions": [
+        "Read",
+        "Write",
+        "Delete",
+        "Execute",
+        "Lock"
+      ]
+    },
+    {
+      "id": "ba1d",
+      "name": "Manager-2",
+      "permissions": [
+        "Read",
+        "Write",
+        "Delete",
+        "Execute"
+      ]
+    },
+    {
+      "id": "2d11",
+      "name": "Manager",
+      "permissions": [
+        "Delete",
+        "Write",
+        "Read"
+      ]
+    },
+    {
+      "id": "6dfa",
+      "name": "Admin",
+      "permissions": [
+        "Read",
+        "Write"
+      ]
+    },
+    {
+      "id": "69f1",
+      "name": "Client",
+      "permissions": [
+        "Read"
+      ]
+    },
+    {
+      "id": "57a5",
+      "name": "Guest",
+      "permissions": []
+    }
+  ],
+  "permissions": [
+    {
+      "id": "6da9",
+      "name": "Read"
+    },
+    {
+      "id": "10ef",
+      "name": "Write"
+    },
+    {
+      "id": "a817",
+      "name": "Delete"
+    },
+    {
+      "id": "e4ba",
+      "name": "Execute"
+    },
+    {
+      "id": "a5d2",
+      "name": "Lock"
+    }
+  ]
+}
