@@ -146,10 +146,5 @@ If you'd like to contribute to this project, follow these steps:
 
 ---
 
-## **License**
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
 ## **Conclusion**
-This RBAC UI project offers a simple yet functional implementation of a Role-Based Access Control system with...
+This RBAC UI project offers a simple yet functional implementation of a Role-Based Access Control system with a clean user interface for managing users, roles, and permissions. The use of React and Material UI ensures that the application is both responsive and user-friendly.
