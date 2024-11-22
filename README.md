@@ -76,6 +76,11 @@ In the root directory of the project, create a file named `db.json` and add the 
   "roles": [
     { "id": 1, "name": "Admin", "permissions": ["Read", "Write", "Delete"] },
     { "id": 2, "name": "Editor", "permissions": ["Read", "Write"] }
+  ],
+  "permissions": [
+    { "id": "6da9", "name": "Read"},
+    { "id": "10ef", "name": "Write"},
+    { "id": "a817", "name": "Delete"}
   ]
 }
 ```
