@@ -42,7 +42,12 @@ The **RBAC UI** is a React-based web application designed to demonstrate a Role-
 
 ## **Project Setup Instructions**
 
-### **1. Clone the Repository**
+### **1. Prerequisites**
+Before you begin, ensure you have met the following requirements:
+- **Node.js**: Make sure you have Node.js and npm installed. You can download it from [Node.js official website](https://nodejs.org/).
+- **Git**: Ensure you have Git installed for version control. You can download it from [Git official website](https://git-scm.com/).
+
+### **2. Clone the Repository**
 
 Clone the repository to your local machine using the following command:
 
@@ -51,7 +56,7 @@ git clone <repository-url>
 cd rbac-ui
 ```
 
-### **2. Install Dependencies**
+### **3. Install Dependencies**
 Install the required dependencies using npm:
 
 ```bash
@@ -59,7 +64,7 @@ npm install
 ```
 This will install all necessary libraries including React, Material UI, Axios, and JSON Server.
 
-### **3. Set Up JSON Server (Mock API)**
+### **4. Set Up JSON Server (Mock API)**
 In the root directory of the project, create a file named `db.json` and add the following mock data for users and roles:
 
 ```json
@@ -82,7 +87,7 @@ npx json-server --watch db.json --port 5000
 ```
 This will run the server at `http://localhost:5000` and expose mock API endpoints for managing users and roles.
 
-### **4. Start the React App**
+### **5. Start the React App**
 To start the React application, use the following command:
 
 ```bash
@@ -147,4 +152,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 ## **Conclusion**
-This RBAC UI project offers a simple yet functional implementation of a Role-Based Access Control system with a clean user interface for managing users, roles, and permissions. The use of React and Material UI ensures that the application is both responsive and user-friendly.
+This RBAC UI project offers a simple yet functional implementation of a Role-Based Access Control system with...
