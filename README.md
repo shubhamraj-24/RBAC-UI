@@ -7,8 +7,8 @@ The **RBAC UI** is a React-based web application designed to demonstrate a Role-
 **Key Features:**
 - **User Management**: View, add, edit, delete, and manage user roles and statuses.
 - **Role Management**: Create and modify roles, and assign permissions to them.
-- **Dynamic Permissions**: Assign or remove specific permissions (Read, Write, Delete) to roles, enabling role-based actions for users.
-- **Mock API**: Utilizes JSON Server to simulate API endpoints for CRUD operations on users and roles.
+- **Dynamic Permissions**: Assign or remove specific permissions (Read, Write, Delete etc.) to roles, enabling role-based actions for users.
+- **Mock API**: Utilizes JSON Server to simulate API endpoints for CRUD operations on users, roles and permissions.
 
 ---
 
