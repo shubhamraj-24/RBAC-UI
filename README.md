@@ -1,46 +1,54 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **RBAC UI - Role-Based Access Control (RBAC) Interface**
 
-## Available Scripts
+## **Project Overview**
 
-In the project directory, you can run:
+The **RBAC UI** is a React-based web application designed to demonstrate a Role-Based Access Control (RBAC) system. It allows administrators to manage users, roles, and permissions dynamically in a secure and user-friendly interface. This project includes functionalities for user management, role assignment, and permission management using mock API data, simulated by **JSON Server**.
 
-### `npm start`
+**Key Features:**
+- **User Management**: View, add, edit, delete, and manage user roles and statuses.
+- **Role Management**: Create and modify roles, and assign permissions to them.
+- **Dynamic Permissions**: Assign or remove specific permissions (Read, Write, Delete) to roles, enabling role-based actions for users.
+- **Mock API**: Utilizes JSON Server to simulate API endpoints for CRUD operations on users and roles.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## **Technologies Used**
+- **Frontend**: React, TypeScript
+- **UI Framework**: Material UI
+- **Mock API**: JSON Server
+- **Routing**: React Router DOM
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Features Explained**
 
-### `npm run build`
+### **1. User Management**
+- **Add User**: Administrators can create new users by providing details such as name, email, role, and status (Active/Inactive).
+- **Edit User**: Admins can modify user details (e.g., role, status) and update them.
+- **Delete User**: Admins can remove users from the system.
+- **User Role Assignment**: Admins can assign roles (Admin, Editor, etc.) to users.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **2. Role Management**
+- **Create Role**: Admins can define new roles (Admin, Editor, etc.) and specify the permissions associated with each role.
+- **Edit Role**: Admins can modify existing roles, including changing the role name and permissions.
+- **Delete Role**: Admins can delete roles from the system.
+- **Permissions Assignment**: Roles are assigned permissions, which define what actions users with that role can perform (e.g., Read, Write, Delete).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **3. Dynamic Permissions**
+- **Assign/Remove Permissions**: Admins can toggle permissions (Read, Write, Delete) for each role. Permissions can be added or removed with a simple checkbox interface.
+- **Real-time Updates**: Changes made to permissions are immediately reflected in the role's permissions list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## **Project Setup Instructions**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### **1. Clone the Repository**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone the repository to your local machine using the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone <repository-url>
+cd rbac-ui
