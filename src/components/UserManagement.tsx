@@ -1,26 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Snackbar, CircularProgress, Box, Grid } from "@mui/material";
+
+import React, { useEffect, useState, useCallback } from "react";
+import { Snackbar, CircularProgress, Box, Grid, Table, TableBody, TableCell, TableHead, TableRow, Button, Modal, TextField, Select, MenuItem, TablePagination, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Alert, Switch } from "@mui/material";
 import { getUsers, addUser, updateUser, deleteUser, getRoles } from "../api/api";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Button,
-  Modal,
-  TextField,
-  Select,
-  MenuItem,
-  TablePagination,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Alert,
-  Switch,
-} from "@mui/material";
 
 const UserManagement: React.FC = () => {
   const [users, setUsers] = useState<any[]>([]);
@@ -39,16 +20,30 @@ const UserManagement: React.FC = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
 
-  
-
   useEffect(() => {
     loadUsers();
     loadRoles();
   }, []);
 
+  // Memoize filterUsers to avoid unnecessary re-renders
+  const filterUsers = useCallback(() => {
+    let result = [...users];
+    if (searchQuery) {
+      const lowerQuery = searchQuery.toLowerCase();
+      result = result.filter(
+        (user) =>
+          user.name.toLowerCase().includes(lowerQuery) || user.email.toLowerCase().includes(lowerQuery)
+      );
+    }
+    if (statusFilter !== "All") {
+      result = result.filter((user) => user.status === statusFilter);
+    }
+    setFilteredUsers(result);
+  }, [users, searchQuery, statusFilter]);  // Adding users, searchQuery, and statusFilter as dependencies
+
   useEffect(() => {
-    filterUsers();
-  }, [users, searchQuery, statusFilter]);
+    filterUsers();  // Call filterUsers whenever the dependencies change
+  }, [filterUsers]);  // Only re-run when filterUsers function is recreated
 
   const loadUsers = async () => {
     setLoading(true);
@@ -131,21 +126,18 @@ const UserManagement: React.FC = () => {
     }
   };
 
-
-
-
-const toggleStatus = async (user: any) => {
+  const toggleStatus = async (user: any) => {
     try {
       const updatedUser = { ...user, status: user.status === "Active" ? "Inactive" : "Active" };
-  
+
       // Optimistically update the UI before API call
       setUsers((prevUsers) =>
         prevUsers.map((u) => (u.id === user.id ? updatedUser : u))
       );
-  
+
       // Call the API to update the status
       await updateUser(user.id, updatedUser);
-  
+
       setSnackbarMessage("User status updated successfully!");
       setSnackbarOpen(true);
     } catch (error) {
@@ -157,24 +149,7 @@ const toggleStatus = async (user: any) => {
       );
     }
   };
-  
 
-
-
-  const filterUsers = () => {
-    let result = [...users];
-    if (searchQuery) {
-      const lowerQuery = searchQuery.toLowerCase();
-      result = result.filter(
-        (user) =>
-          user.name.toLowerCase().includes(lowerQuery) || user.email.toLowerCase().includes(lowerQuery)
-      );
-    }
-    if (statusFilter !== "All") {
-      result = result.filter((user) => user.status === statusFilter);
-    }
-    setFilteredUsers(result);
-  };
 
   return (
     <Box sx={{ padding: 2 }}>
