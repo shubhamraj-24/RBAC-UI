@@ -90,7 +90,7 @@ Open a terminal and start the JSON Server to simulate API endpoints:
 ```bash
 npx json-server --watch db.json --port 5000
 ```
-This will run the server at `http://localhost:5000` and expose mock API endpoints for managing users and roles.
+This will run the server at `http://localhost:5000` and expose mock API endpoints for managing users, roles and permissions.
 
 ### **5. Start the React App**
 Open a second terminal and start the React application using the following command:
