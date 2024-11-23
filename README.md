@@ -65,7 +65,7 @@ npm install
 This will install all necessary libraries including React, Material UI, Axios, and JSON Server.
 
 ### **4. Set Up JSON Server (Mock API)**
-In the root directory of the project, create a file named `db.json` and add the following mock data for users and roles:
+In the root directory of the project, there is a file named `db.json` which contains mock data for users, roles and permissions :
 
 ```json
 {
