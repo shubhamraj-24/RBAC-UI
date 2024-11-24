@@ -94,7 +94,8 @@ This will run the server at `http://localhost:5000` and expose mock API endpoint
 
 
 
-Configuring API URL
+Configuring API URL<br>
+
 To run the application locally, first **uncomment the following line** in the `api.ts` file:
 
 ```bash
