@@ -1,7 +1,9 @@
 
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000';
+//const API_URL = 'http://localhost:5000';
+
+const API_URL = 'https://database-rbac.onrender.com';
 
 // User APIs
 export const getUsers = () => axios.get(`${API_URL}/users`);
